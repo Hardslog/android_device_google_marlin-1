@@ -3,8 +3,8 @@
 # Product-specific compile-time definitions
 #
 
-# Allow Lineage config to override others
--include device/google/marlin/sailfish/BoardConfigLineage.mk
+# Allow Omni config to override others
+-include device/google/marlin/sailfish/BoardConfigOmni.mk
 
 TARGET_BOARD_PLATFORM := msm8996
 TARGET_BOOTLOADER_BOARD_NAME := sailfish
@@ -84,6 +84,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 10737418240
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
+BOARD_NEEDS_VENDORIMAGE_SYMLINK := true
 
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
